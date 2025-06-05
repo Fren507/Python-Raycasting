@@ -82,8 +82,9 @@ export default function Home() {
       <div className="flex justify-between items-center p-4 bg-slate-300 border-1 border-slate-400/40 rounded-b-xl shadow-slate-400/60 shadow-lg">
         <div className="flex justify-start items-center gap-6">
           <h1 className="font-extrabold text-center">
-            <a href="https://github.com/Fren507"></a>Raycasting Maze Generator -
-            by Jason
+            <a href="https://github.com/Fren507">
+              Raycasting Maze Generator - by Jason
+            </a>
           </h1>
         </div>
         <div className="flex justify-end items-center gap-6">
