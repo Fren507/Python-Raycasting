@@ -8,31 +8,85 @@ TILE_SIZE = 64
 
 # Spielfeld (1 = Wand, 0 = leer)
 game_map = [
-    [1,1,1,1,1,1,1,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,1,1,1,1,0,1],
-    [1,0,0,1,0,1,0,1],
-    [1,0,0,1,0,0,0,1],
-    [1,0,0,0,0,1,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,1,1,1,1,1,1,1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ]
 
 MAP_WIDTH = len(game_map[0])
 MAP_HEIGHT = len(game_map)
 
 WIDTH = MAP_WIDTH * TILE_SIZE
-HEIGHT = MAP_HEIGHT * TILE_SIZE
+HEIGHT = MAP_HEIGHT * TILE_SIZE 
 
 # == VARIABLEN ===
 tile_depth = TILE_SIZE / 1.2
-max_depth = tile_depth * HEIGHT
+max_depth = tile_depth * MAP_HEIGHT / 1.5
 
 # === WICHTIG ===
 
 if MAP_WIDTH != MAP_HEIGHT:
     print("SPIELFELD MUSS QUADRATISCH SEIN.")
     sys.exit(1)
+    
+# Hellgrau mit schwarzem Hintergrund
+print("\033[37;40m██\033[0m")
+
+# Dunkelgrau mit schwarzem Hintergrund
+print("\033[90;40m██\033[0m")
+     
+
+print(f"Resolution in percentage\n\n100 = 100%, but the higher the value, the more performance is required.\nYour'e map is {MAP_WIDTH}x{MAP_HEIGHT} big.\n\n\nMy suggestion:\n100%, if your map has small tunnels and no big rooms. \n75%, if it has some, but not too many rooms. \n50% if it has large areas. \n25%, if it is only an Area with like 20 or more tiles.\n\nThe size of the map is not that important, like the size of rooms or tunnels.\n\nEnter -1 to get a minimap printed in terminal.")
+while True:
+    try:
+        resolution = int(input(f"\n\nResolution: "))
+        if resolution == -1:
+            print("\n\nMinimap:\n")
+            for row in range(len(game_map)):
+                for col in range(len(game_map[row])):
+                    if row%2 == 0: 
+                        if col%2 == 0: 
+                            print("\033[38;5;252;40m██\033[0m" if game_map[row][col] == 1 else "\033[38;5;232;40m██\033[0m", end="") 
+                        else: 
+                            print("\033[38;5;255;40m██\033[0m" if game_map[row][col] == 1 else "\033[38;5;234;40m██\033[0m", end="") 
+                    else: 
+                        if col%2 == 0: 
+                            print("\033[38;5;254;40m██\033[0m" if game_map[row][col] == 1 else "\033[38;5;234;40m██\033[0m", end="") 
+                        else: 
+                            print("\033[38;5;252;40m██\033[0m" if game_map[row][col] == 1 else "\033[38;5;232;40m██\033[0m", end="") 
+                    
+                print() # Zeilenumbruch nach jeder Reihe
+        elif resolution <= 0 or resolution > 100:
+            print("Please enter a number between 1 and 100, or type -1 for a minimap.")
+        else:
+            NUM_RAYS = int((WIDTH * resolution) / 100)
+            break;
+
+
+    except ValueError:
+        print("I said \"Enter a number :)\n\"")
 
 # === SPIELER ===
 player_x, player_y = WIDTH // 2, HEIGHT // 2
@@ -47,14 +101,13 @@ clock = pygame.time.Clock()
 
 # === FUNKTION: STRAHLENWERFUNG ===
 def cast_rays(screen, px, py, angle):
-    num_rays = WIDTH
     fov = math.pi / 2.8
     start_angle = angle - fov / 2
 
     distances = []
 
-    for ray in range(num_rays):
-        ray_angle = start_angle + (ray * fov / num_rays)
+    for ray in range(NUM_RAYS):
+        ray_angle = start_angle + (ray * fov / NUM_RAYS)
         ray_x, ray_y = px, py
 
         for depth in range(1, int(max_depth)):
