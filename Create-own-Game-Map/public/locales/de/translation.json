@@ -1,0 +1,9 @@
+{
+  "title": "Raycasting Labyrinth Generator - von Jason",
+  "sizeLabel": "Größe: ",
+  "mazeModeLabel": "Labyrinth Modus",
+  "normalModeLabel": "Normaler Modus",
+  "mazePresetLabel": "Labyrinth-Vorlage",
+  "exportLabel": "Labyrinth Downloaden",
+  "printLabel": "Schreibe Labyrinth in die Konsole"
+}

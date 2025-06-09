@@ -1,0 +1,9 @@
+{
+  "title": "Генератор лабиринта Raycasting - от Джейсона",
+  "sizeLabel": "Размер: ",
+  "mazeModeLabel": "Режим лабиринта",
+  "normalModeLabel": "Обычный режим",
+  "mazePresetLabel": "Предустановленный лабиринт",
+  "exportLabel": "Скачать лабиринт",
+  "printLabel": "Вывести лабиринт в консоль"
+}

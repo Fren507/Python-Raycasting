@@ -1,0 +1,9 @@
+{
+  "title": "Raycasting laberinto Generador - de Jason",
+  "sizeLabel": "Tamaño: ",
+  "mazeModeLabel": "Modo de laberinto",
+  "normalModeLabel": "Modo normal",
+  "mazePresetLabel": "Laberinto Predeterminado",
+  "exportLabel": "Descarga Laberinto",
+  "printLabel": "Escribe Laberinto en la consola"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Raycasting Maze Generator - by Jason",
+  "sizeLabel": "Size: ",
+  "mazeModeLabel": "Maze Mode",
+  "normalModeLabel": "Normal Mode",
+  "mazePresetLabel": "Maze Preset",
+  "exportLabel": "Export File",
+  "printLabel": "Print To Console"
+}
