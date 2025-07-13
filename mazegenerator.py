@@ -84,33 +84,30 @@ def displayMaze(grid: list):
     
     return numericGrid  # Als 2D-Array zurückgeben
 
+def getMaze(size: int) -> list[list[int]]:
+    grid = [[Cell(x, y) for x in range(size)] for y in range(size)]
+    current = grid[0][0]
+    stack = []
+    # Main loop to generate the maze
+    while True:
+        current.visited = True
+        children = current.getChildren(grid)
 
-# Request the user to input a maze size and initialise the maze, stack and initial Cell
-size = int(input('Enter a maze size: '))
-grid = [[Cell(x, y) for x in range(size)] for y in range(size)]
-current = grid[0][0]
-stack = []
+        if children:
+            choice = random.choice(children)
+            choice.visited = True
 
+            stack.append(current)
 
-# Main loop to generate the maze
-while True:
-    current.visited = True
-    children = current.getChildren(grid)
+            removeWalls(current, choice)
 
-    if children:
-        choice = random.choice(children)
-        choice.visited = True
-
-        stack.append(current)
-
-        removeWalls(current, choice)
-
-        current = choice
-    
-    elif stack:
-        current = stack.pop()
-    else:
-        break
+            current = choice
+        
+        elif stack:
+            current = stack.pop()
+        else:
+            break
+    return displayMaze(grid)
 
 
 

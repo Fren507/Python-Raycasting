@@ -1,0 +1,1103 @@
+[{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 163,
+	"startColumn": 14,
+	"endLineNumber": 163,
+	"endColumn": 23
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"NUM_RAYS\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 228,
+	"startColumn": 22,
+	"endLineNumber": 228,
+	"endColumn": 30
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"NUM_RAYS\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 229,
+	"startColumn": 48,
+	"endLineNumber": 229,
+	"endColumn": 56
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 233,
+	"startColumn": 28,
+	"endLineNumber": 233,
+	"endColumn": 37
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 234,
+	"startColumn": 28,
+	"endLineNumber": 234,
+	"endColumn": 37
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 248,
+	"startColumn": 20,
+	"endLineNumber": 248,
+	"endColumn": 26
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 248,
+	"startColumn": 33,
+	"endLineNumber": 248,
+	"endColumn": 39
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 249,
+	"startColumn": 35,
+	"endLineNumber": 249,
+	"endColumn": 41
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 249,
+	"startColumn": 51,
+	"endLineNumber": 249,
+	"endColumn": 57
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 250,
+	"startColumn": 26,
+	"endLineNumber": 250,
+	"endColumn": 32
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 250,
+	"startColumn": 66,
+	"endLineNumber": 250,
+	"endColumn": 71
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 253,
+	"startColumn": 5,
+	"endLineNumber": 253,
+	"endColumn": 11
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 254,
+	"startColumn": 17,
+	"endLineNumber": 254,
+	"endColumn": 22
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 255,
+	"startColumn": 22,
+	"endLineNumber": 255,
+	"endColumn": 28
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 255,
+	"startColumn": 51,
+	"endLineNumber": 255,
+	"endColumn": 56
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 255,
+	"startColumn": 58,
+	"endLineNumber": 255,
+	"endColumn": 64
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 258,
+	"startColumn": 18,
+	"endLineNumber": 258,
+	"endColumn": 27
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 258,
+	"startColumn": 30,
+	"endLineNumber": 258,
+	"endColumn": 36
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 262,
+	"startColumn": 13,
+	"endLineNumber": 262,
+	"endColumn": 19
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 264,
+	"startColumn": 30,
+	"endLineNumber": 264,
+	"endColumn": 36
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 265,
+	"startColumn": 26,
+	"endLineNumber": 265,
+	"endColumn": 32
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 268,
+	"startColumn": 10,
+	"endLineNumber": 268,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"MINImap_width\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 268,
+	"startColumn": 18,
+	"endLineNumber": 268,
+	"endColumn": 31
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player_x\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 268,
+	"startColumn": 35,
+	"endLineNumber": 268,
+	"endColumn": 43
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 268,
+	"startColumn": 46,
+	"endLineNumber": 268,
+	"endColumn": 55
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"minimap_tile_size\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 268,
+	"startColumn": 58,
+	"endLineNumber": 268,
+	"endColumn": 75
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player_y\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 269,
+	"startColumn": 10,
+	"endLineNumber": 269,
+	"endColumn": 18
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"TILE_SIZE\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 269,
+	"startColumn": 21,
+	"endLineNumber": 269,
+	"endColumn": 30
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"minimap_tile_size\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 269,
+	"startColumn": 33,
+	"endLineNumber": 269,
+	"endColumn": 50
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 270,
+	"startColumn": 24,
+	"endLineNumber": 270,
+	"endColumn": 30
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"minimap_tile_size\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 270,
+	"startColumn": 55,
+	"endLineNumber": 270,
+	"endColumn": 72
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 281,
+	"startColumn": 9,
+	"endLineNumber": 281,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 285,
+	"startColumn": 9,
+	"endLineNumber": 285,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 285,
+	"startColumn": 35,
+	"endLineNumber": 285,
+	"endColumn": 40
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 285,
+	"startColumn": 78,
+	"endLineNumber": 285,
+	"endColumn": 84
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 288,
+	"startColumn": 9,
+	"endLineNumber": 288,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 288,
+	"startColumn": 36,
+	"endLineNumber": 288,
+	"endColumn": 41
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 288,
+	"startColumn": 80,
+	"endLineNumber": 288,
+	"endColumn": 86
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 435,
+	"startColumn": 9,
+	"endLineNumber": 435,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 441,
+	"startColumn": 9,
+	"endLineNumber": 441,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 441,
+	"startColumn": 34,
+	"endLineNumber": 441,
+	"endColumn": 39
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 441,
+	"startColumn": 76,
+	"endLineNumber": 441,
+	"endColumn": 82
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 442,
+	"startColumn": 9,
+	"endLineNumber": 442,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 442,
+	"startColumn": 34,
+	"endLineNumber": 442,
+	"endColumn": 39
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 442,
+	"startColumn": 76,
+	"endLineNumber": 442,
+	"endColumn": 82
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 443,
+	"startColumn": 9,
+	"endLineNumber": 443,
+	"endColumn": 15
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"WIDTH\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 443,
+	"startColumn": 33,
+	"endLineNumber": 443,
+	"endColumn": 38
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"HEIGHT\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 443,
+	"startColumn": 74,
+	"endLineNumber": 443,
+	"endColumn": 80
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportCallIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportCallIssue.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "Fehlende Argumente für die Parameter \"info\", \"tile_size\"",
+	"source": "Pylance",
+	"startLineNumber": 459,
+	"startColumn": 1,
+	"endLineNumber": 459,
+	"endColumn": 14
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"create_minimap_surface\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 461,
+	"startColumn": 18,
+	"endLineNumber": 461,
+	"endColumn": 40
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 473,
+	"startColumn": 5,
+	"endLineNumber": 473,
+	"endColumn": 11
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"screen\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 475,
+	"startColumn": 27,
+	"endLineNumber": 475,
+	"endColumn": 33
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player_x\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 475,
+	"startColumn": 35,
+	"endLineNumber": 475,
+	"endColumn": 43
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player_y\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 475,
+	"startColumn": 45,
+	"endLineNumber": 475,
+	"endColumn": 53
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"player_angle\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 475,
+	"startColumn": 55,
+	"endLineNumber": 475,
+	"endColumn": 67
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"draw_minimap\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 477,
+	"startColumn": 5,
+	"endLineNumber": 477,
+	"endColumn": 17
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"clock\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 481,
+	"startColumn": 5,
+	"endLineNumber": 481,
+	"endColumn": 10
+},{
+	"resource": "/Users/jasonfrenzel/Documents/Coding/Python/Games/Raycasting/main.py",
+	"owner": "python",
+	"code": {
+		"value": "reportUndefinedVariable",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pylance-release/blob/main/docs/diagnostics/reportUndefinedVariable.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "\"FPS\" ist nicht definiert.",
+	"source": "Pylance",
+	"startLineNumber": 481,
+	"startColumn": 16,
+	"endLineNumber": 481,
+	"endColumn": 19
+}]

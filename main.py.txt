@@ -1,0 +1,481 @@
+from dataclasses import dataclass
+import pygame
+import math
+import sys
+    
+game_map = [
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+]    
+
+# === CLASSES ===
+
+@dataclass
+class Colors:
+    black: tuple[int, int, int] = (0, 0, 0)
+    white: tuple[int, int, int] = (255, 255, 255)
+    gray: tuple[int, int, int] = (75, 75, 75)
+    light_gray: tuple[int, int, int] = (200, 200, 200)
+    dark_gray: tuple[int, int, int] = (50, 50, 50)
+    yellow: tuple[int, int, int] = (255, 255, 0)
+    green: tuple[int, int, int] = (0, 255, 0)
+
+class Size:
+    def __init__(self, width: int, height: int):
+        self.width = width
+        self.height = height
+        self.min = min(width, height)
+        
+class World:
+    def __init__(self, game_map: list[list[int]], tile_size: int):
+        self.game_map = game_map
+        self.size = Size(len(game_map[0]), len(game_map))
+        self.tile_size = tile_size
+    
+    def is_walkable(self, x: int, y: int) -> bool:
+        return self.game_map[y][x] == 0
+
+@dataclass
+class Information:
+    screen: pygame.Surface   
+    info: pygame.display.Info # type: ignore
+    clock: pygame.time.Clock
+    size: Size
+    fps: int = 60
+    
+@dataclass
+class MinimapPlayer:
+    x: float
+    y: float
+    
+@dataclass
+class Player:
+    x: float
+    y: float
+    angle: float
+    move_speed: float
+    rot_speed: float
+    radius: float
+    # minimap: MinimapPlayer
+    
+    def find_spawn_point(self, info: Information, world: World):
+        for wy in range(1, len(world.game_map) - 1):  # Keine Randbereiche
+            for wx in range(1, len(world.game_map[wy]) - 1):
+                if game_map[wy][wx] == 0:  # Freie Zelle gefunden
+                    self.x = (wx + 0.5 * world.tile_size)
+                    self.y = (wy + 0.5 * world.tile_size)
+                    return
+        
+        self.x = info.size.width // 2
+        self.y = info.size.height // 2
+        return
+    
+    def can_move(self, x, y, world: World) -> bool:
+        """
+        Checks if position (x, y) is within an empty cell.
+        Treats the player as a circle with radius.
+        """
+        for dx in (-self.radius, self.radius):
+            for dy in (-self.radius, self.radius):
+                gx = int((x + dx) // world.tile_size)
+                gy = int((y + dy) // world.tile_size)
+                # print(f"Checking cell gx={gx}, gy={gy}...")
+                if gx < 0 or gx >= world.size.width or gy < 0 or gy >= world.size.height:
+                    # print("-> Movement blocked: outside map")
+                    return False
+                if world.game_map[gy][gx] != 0:
+                    # print("-> Movement blocked: wall detected")
+                    return False
+        # print("-> Movement allowed")
+        return True
+    
+    def move(self, info: Information, world: World):
+        keys = pygame.key.get_pressed()
+        dx = math.cos(self.angle) * self.move_speed
+        dy = math.sin(self.angle) * self.move_speed
+
+        new_x, new_y = self.x, self.y
+        if keys[pygame.K_w]:
+            new_x += dx
+            new_y += dy
+        if keys[pygame.K_s]:
+            new_x -= dx
+            new_y -= dy
+        if keys[pygame.K_ESCAPE]:
+            menu(info)
+
+        # print(f"Attempting move to ({new_x:.2f}, {player_y:.2f})")
+        if self.can_move(new_x, self.y, world):
+            self.x = new_x
+        # print(f"Attempting move to ({player_x:.2f}, {new_y:.2f})")
+        if self.can_move(self.x, new_y, world):
+            self.y = new_y
+
+        if keys[pygame.K_a]: self.angle -= self.rot_speed
+        if keys[pygame.K_d]: self.angle += self.rot_speed
+
+@dataclass
+class RaycastingConfig:
+    fov: float
+    start_angle: float
+    num_rays: int
+    max_depth: float
+    
+    def cast_rays(self, info: Information, player: Player) -> list[float]:
+        distances = []
+
+        for ray in range(self.num_rays):
+            ray_angle = self.start_angle + ray * (self.fov / self.num_rays)
+            for depth in range(1, int(self.max_depth)):
+                tx = player.x + math.cos(ray_angle) * depth
+                ty = player.y + math.sin(ray_angle) * depth
+                gx = int(tx // world.tile_size)
+                gy = int(ty // world.tile_size)
+                if gx < 0 or gx >= world.size.width or gy < 0 or gy >= world.size.height:
+                    distances.append(self.max_depth)
+                    break
+                if game_map[gy][gx] == 1:
+                    dist = depth * math.cos(player.angle - ray_angle)
+                    distances.append(dist)
+                    pygame.draw.line(info.screen, (255, 255, 0), (player.x, player.y), (tx, ty), 1)
+                    break
+            else:
+                distances.append(self.max_depth)
+        return distances
+
+@dataclass
+class Minimap:
+    size: Size
+    tile_size: int
+    minimap_static: pygame.Surface = pygame.Surface((0, 0))
+    
+    def create_minimap_surface(self, world: World):
+        minimap_surface = pygame.Surface((self.size.width, self.size.height))
+        minimap_surface.fill((0, 0, 0))  # Hintergrund
+
+        for i, row in enumerate(game_map):
+            for j, col in enumerate(row):
+                if col == 1:
+                    continue  # Wände weglassen
+                color = (255, 255, 255)  # Nur begehbare Felder
+                x = j * self.tile_size
+                y = i * self.tile_size
+                pygame.draw.rect(minimap_surface, color, (x, y, self.tile_size, self.tile_size))
+        
+        self.minimap_static = minimap_surface
+    
+    def draw_minimap(self, info: Information):
+        info.screen.blit(self.minimap_static, (info.size.width - self.size.width, 0))
+
+@dataclass
+class DrawConfig:
+    wall_start_shade: int = 85
+    wall_end_shade: int = 255
+    
+    floor_start_shade: int = 85
+    floor_end_shade: int = 170
+    
+    def draw_floor(self, info: Information):
+        for i in range(info.size.height // 2, info.size.height):  # Nur unteren Bereich färben
+            shade = min(255, int((i - info.size.height // 2) / (info.size.height // 2) * self.floor_start_shade) + self.floor_start_shade)
+            pygame.draw.line(info.screen, (shade, shade, shade), (0, i), (info.size.height, i))
+
+    def draw_walls(self, info: Information, raycasting_config: RaycastingConfig, world: World, distances: list[float]):
+        info.screen.fill((0, 0, 0))
+        ray_width = info.size.width // len(distances)
+        pygame.draw.rect(info.screen, (75, 75, 75), (0, 0, info.size.width, info.size.height))
+        self.draw_floor(info)
+        for i, dist in enumerate(distances):
+            wall_h = world.tile_size * info.size.height / (dist + 0.0001)
+            shade = max(0, 255 - int(dist / raycasting_config.max_depth * 255))
+            color = (shade, shade, shade)
+            x = i * ray_width
+            y = info.size.height // 2 - wall_h // 2
+            if dist >= raycasting_config.max_depth:
+                pygame.draw.rect(info.screen, (0, 0, 0), (x, y, ray_width, wall_h))
+            pygame.draw.rect(info.screen, color, (x, y, ray_width, wall_h))
+
+
+# === SETUP PYGAME ===
+
+def init_pygame() -> Information:
+    pygame.init()
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    info = pygame.display.Info()
+    clock = pygame.time.Clock()
+
+    WIDTH, HEIGHT = info.current_w, info.current_h
+        
+    return Information(screen, info, clock, Size(WIDTH, HEIGHT))
+
+# === PLAYER SETUP ===
+def setup_player(info: Information, world: World) -> Player:
+    new_Player = Player(0, 0, 0, 3, 0.05, 10)
+    new_Player.find_spawn_point(info, world)
+    return new_Player
+
+# === MINIMAP SETUP ===
+def setup_minimap(info: Information, world: World, res: int) -> Minimap:
+    minimap_size = info.size.min // 4
+    minimap_tile_size = minimap_size // max(world.size.width, world.size.height)
+    if world.size.min > 30: 
+        minimap_size *= 2
+    minimap_width = minimap_tile_size * len(game_map[0])
+    minimap_height = minimap_tile_size * len(game_map)
+    
+    return Minimap(Size(minimap_width, minimap_height), minimap_tile_size) # type: ignore
+
+# === WORLD SETUP ===
+def setup_world(info: Information, tile_size: int) -> World:
+    screen = info.screen
+    WIDTH = info.size.width
+    HEIGHT = info.size.height
+    font = pygame.font.SysFont(None, 72)
+    small_font = pygame.font.SysFont(None, 36)
+    running = True
+    
+    game_map: list[list[int]] = [[]]
+    
+    def map_menu() -> bool:
+        def generated_map() -> bool:
+            try:
+                import mazegenerator as mg
+                maze_size = numeral_input(info, "Please enter the maze size (1-100):", legal_range_start = 1, legal_range_end = 100)
+                global game_map
+                game_map = mg.getMaze(maze_size)
+                return True
+            
+            except ImportError:
+                running = False
+                while running:
+                    screen.fill((0, 0, 0))
+                    error_text = small_font.render("The file 'mazegenerator.py' was not found. To return to previous menu press any key.", True, (255, 255, 255))
+                    screen.blit(error_text, (WIDTH // 2 - error_text.get_width() // 2, HEIGHT // 3))
+                    pygame.display.flip()
+                    
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            pygame.quit()
+                            sys.exit()
+                        elif event.type == pygame.KEYDOWN:
+                            running = False
+
+            return False
+
+        def own_map():
+            try:
+                import maze # type: ignore
+                global game_map
+                
+                game_map = maze.game_map
+                return True
+            except ImportError:
+                running = False
+                while running:
+                    screen.fill((0, 0, 0))
+                    error_text = small_font.render("The file 'maze.py' was not found. To return to previous menu press any key.", True, (255, 255, 255))
+                    screen.blit(error_text, (WIDTH // 2 - error_text.get_width() // 2, HEIGHT // 3))
+                    pygame.display.flip()
+                    
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            pygame.quit()
+                            sys.exit()
+                        elif event.type == pygame.KEYDOWN:
+                            running = False
+        
+        running = True
+        while running:
+            screen.fill((0, 0, 0))   
+            title_text = font.render("Maze Switcher", True, (255, 255, 255))
+            
+            own_map_text = small_font.render("Press [O] for own map", True, (255, 255, 255))
+            generated_map_text = small_font.render("Press [G] for generated maze", True, (255, 255, 255))
+            return_to_last_menu_text = small_font.render("Press [R] or [ESC] to return", True, (255, 255, 255))
+            
+            screen.blit(title_text, (WIDTH // 2 - title_text.get_width() // 2, HEIGHT // 3))
+            screen.blit(own_map_text, (WIDTH // 2 - own_map_text.get_width() // 2, HEIGHT // 2))
+            screen.blit(generated_map_text, (WIDTH // 2 - generated_map_text.get_width() // 2, HEIGHT // 2 + 50))
+            screen.blit(return_to_last_menu_text, (WIDTH // 2 - return_to_last_menu_text.get_width() // 2, HEIGHT // 2 + 100))
+            
+            pygame.display.flip()
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_o or event.key == pygame.K_0:
+                        if own_map():
+                            return True
+                    elif event.key == pygame.K_g:
+                        if generated_map():
+                            return True
+                    elif event.key == pygame.K_r or event.key == pygame.K_ESCAPE:
+                        running = False
+                
+        return False
+
+    while running:
+        screen.fill((0, 0, 0))
+        title_text = font.render("Enti 3D", True, (200, 200, 255))
+        
+        start_text = small_font.render("Press [S] to enter Map Menu", True, (255, 255, 255))
+        quit_text = small_font.render("Press [Q] to quit", True, (255, 255, 255))
+
+        screen.blit(title_text, (WIDTH // 2 - title_text.get_width() // 2, HEIGHT // 3))
+        screen.blit(start_text, (WIDTH // 2 - start_text.get_width() // 2, HEIGHT // 2))
+        screen.blit(quit_text, (WIDTH // 2 - quit_text.get_width() // 2, HEIGHT // 2 + 50))
+
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_s:
+                    if map_menu():
+                        running = False
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    sys.exit()
+    
+    return World(game_map, tile_size)
+
+#!=== SETUP RESOLUTION ===
+def setup_resolution(info: Information) -> int:
+    return 100
+
+def setup_raycasting(info: Information, world: World, res: int) -> RaycastingConfig:
+    fov = math.pi / 2.8
+    start_angle = 0 - fov / 2  # Default angle is 0; replace with player's angle if available
+    num_rays = int(info.size.width * res / 100)
+    tile_depth = world.tile_size / 1.2
+    if world.size.min < 10:
+        max_depth = tile_depth * world.size.height / 1.5
+    else:
+        max_depth = tile_depth * 10
+    
+    return RaycastingConfig(fov, start_angle, num_rays, max_depth)
+
+
+# === FUNCTIONS: Raycasting & Scene Drawing ===
+
+def numeral_input(info: Information, prompt: str, legal_range_start: int, legal_range_end: int, error_msg: str = "Bitte eine Zahl eingeben.") -> int: # type: ignore
+    font = pygame.font.SysFont(None, 72)
+    small_font = pygame.font.SysFont(None, 36)
+    
+    input_text = ""  # Speichert die Eingabe
+    running = True
+
+    while running:
+        info.screen.fill((0, 0, 0))
+        
+        # Anzeige der Texte
+        prompt_text = small_font.render(prompt, True, (200, 200, 255))
+        info.screen.blit(prompt_text, (info.size.width // 2 - prompt_text.get_width() // 2, info.size.height // 4))
+
+        text_surface = font.render(input_text, True, (255, 255, 255))
+        info.screen.blit(text_surface, (info.size.width // 2 - text_surface.get_width() // 2, info.size.height // 3))
+
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:  # Enter-Taste gedrückt
+                    try:
+                        user_number = int(input_text)  # Konvertiere in eine Zahl
+                        if user_number <= legal_range_end and user_number >= legal_range_start:
+                            return user_number
+                        else:
+                            input_text = f"Number must be between {legal_range_start} and {legal_range_end}."
+                    except ValueError:
+                        input_text = error_msg  # Fehlermeldung anzeigen
+                elif event.key == pygame.K_BACKSPACE:  # Rücktaste gedrückt
+                    input_text = input_text[:-1]
+                else:
+                    if event.unicode.isdigit():  # Nur Zahlen zulassen
+                        input_text += event.unicode
+
+def menu(info: Information):
+    font = pygame.font.SysFont(None, 72)
+    small_font = pygame.font.SysFont(None, 36)
+    running = True
+
+    while running:
+        info.screen.fill((0, 0, 0))
+        title_text = font.render("Enti 3D", True, (200, 200, 255))
+        
+        start_text = small_font.render("Press [S] to return", True, (255, 255, 255))
+        quit_text = small_font.render("Press [Q] to quit", True, (255, 255, 255))
+
+        info.screen.blit(title_text, (info.size.width // 2 - title_text.get_width() // 2, info.size.height // 3))
+        info.screen.blit(start_text, (info.size.width // 2 - start_text.get_width() // 2, info.size.height // 2))
+        info.screen.blit(quit_text, (info.size.width // 2 - quit_text.get_width() // 2, info.size.height // 2 + 50))
+
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_s:
+                    running = False  # Spiel startet
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    sys.exit()
+
+# === MAIN LOOP ===
+
+def main_loop():
+    return;
+
+# minimap_static = create_minimap_surface()
+# running = True
+# while running:
+#     for e in pygame.event.get():
+#         if e.type == pygame.QUIT:
+#             running = False
+
+#     keys = pygame.key.get_pressed()
+        
+#     if keys[pygame.K_ESCAPE]:
+#         menu()
+        
+#     player.move()
+
+#     distances = cast_rays(screen, player_x, player_y, player_angle)
+#     draw_walls(distances)
+#     draw_minimap()
+#     draw_player()
+
+#     pygame.display.flip()
+#     clock.tick(FPS)
+
+# pygame.quit()
+# sys.exit()
+
+if __name__ == "__main__":
+    information = init_pygame()
+    world = setup_world(information, 64)
+    res = setup_resolution(information)
+    setup_player(information, world)
+    setup_minimap(information, world, res)
+    setup_raycasting(information, world, res)
+    
+    main_loop()
+    
